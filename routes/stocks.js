@@ -21,7 +21,7 @@ mysql.getConnection((error, conn) => {
 router.get("/", (req, res) => {
   mysql.getConnection((error, conn) => {
     conn.query(
-      "SELECT * FROM stock",
+      "SELECT * FROM stocks",
       (error, resultado, field) => {
         conn.release();
         res.status(200).send({
